@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siklóernyő Feladat Dokumentáció</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            font-family: monospace;
+        }
+
+        .example {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+        }
+
+        .example-code {
+            background-color: #eef;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Siklóernyő Feladat Dokumentáció</h1>
+
+    <p>Alex siklóernyőzni szeretne a Tátra hegycsúcsain. A hegycsúcsok a Tátrában négyzetrácsosan <strong>N</strong> sorban és azon belül <strong>M</strong> oszlopban helyezkednek el, és mindegyiknek ismert a magassága. A siklóernyőzés során Alex elindul az egyik kiválasztott hegycsúcsról, és átrepül valamelyik (nem feltétlenül szomszédos) alacsonyabb magasságú hegycsúcsra, mely a jelenlegi csúccsal azonos sorban vagy azonos oszlopban helyezkedik el.</p>
+
+    <h2>Feladat Leírása</h2>
+
+    <p>A csúcsokat nem szükséges közvetlenül átrepülnie (a levegőben elkerülheti a közbeeső magasabb hegycsúcsokat). A repülések során Alex több alkalommal is átrepülhet, és bármelyik csúcsról befejezheti a siklóernyőzést, ha legalább egy alkalommal már átrepült.</p>
+
+    <p>Add meg a lentebb megadott magasságok esetén minden egyes hegycsúcsra, hogy onnan kiindulva:</p>
+
+    <ul>
+        <li><strong>A)</strong> Hány különböző siklóernyőzést tehet, mely során pontosan egy alkalommal repül át másik csúcsra?</li>
+        <li><strong>B)</strong> Hány különböző siklóernyőzést tehet, mely során pontosan két alkalommal repül át másik csúcsra?</li>
+        <li><strong>C)</strong> Hány különböző siklóernyőzést tehet összesen?</li>
+    </ul>
+
+    <h2>Bemenet</h2>
+    <p>Az első sorban két egész számot olvashatunk: <strong>N</strong> (a sorok száma) és <strong>M</strong> (az oszlopok száma).</p>
+    <p>A következő <strong>N</strong> sor mindegyike <strong>M</strong> egész számot tartalmaz, amelyek a hegycsúcsok magasságát jelzik.</p>
+
+    <h2>Kimenet</h2>
+    <p>Az első sorban a válasz a pontosan egy átrepüléssel végrehajtható siklóernyőzések számát adja meg.</p>
+    <p>A második sorban a válasz a pontosan két átrepüléssel végrehajtható siklóernyőzések számát adja meg.</p>
+    <p>A harmadik sorban a válasz az összes lehetséges siklóernyőzés számát adja meg.</p>
+
+    <h2>Példa Bemenet</h2>
+    <pre>
+    3 4
+    1 1 3 5
+    1 1 1 4
+    9 2 7 6
+    </pre>
+
+    <h2>Példa Kimenet</h2>
+    <pre>
+    6
+    2
+    10
+    </pre>
+
+    <h2>Magyarázat</h2>
+    <p>A bemenet szerint egy 3x4-es mátrixot kapunk, amelyben az egyes csúcsok magasságai szerepelnek. A feladatban meghatározott, hogy milyen módon lehet elérni másik csúcsokat a szabályok szerint. Az eredmények alapján a következő számokat kaptuk:</p>
+
+    <ul>
+        <li>Az első sor a pontosan egy átrepüléssel elérhető utak számát.</li>
+        <li>A második sor a pontosan két átrepüléssel elérhető utak számát.</li>
+        <li>A harmadik sor az összes lehetséges repülési mód számát tartalmazza.</li>
+    </ul>
+
+    <h2>Fejlesztési javaslatok</h2>
+    <p>A feladat hatékony megoldása érdekében figyelembe kell venni, hogy a csúcsok közötti repüléseket azonos sorban és oszlopban kell meghatározni. Az optimális algoritmusok segíthetnek a gyors megoldásban, különösen akkor, ha a csúcsok száma nagy.</p>
+
+</body>
+</html>
